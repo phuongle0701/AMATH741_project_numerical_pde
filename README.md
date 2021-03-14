@@ -1,4 +1,4 @@
-# AMATH741_project_numerical_pde
+# AMATH741 - Numerical Partial Differential Equations: Project
 
 
 * 'matlab' folder contains the matlab files to generate the data associated with PDE problems: Burgers and Korteweg-De Vries (kDV) equations. 
