@@ -21,7 +21,7 @@ u_{t} + u u_{x} = 0.1 u_{xx}
 * domain: 
 
 ```math
-(x,t) \in [-8,8] \times [0, 10]$. 
+(x,t) \in [-8,8] \times [0, 10]
 ```
 
 
@@ -49,7 +49,7 @@ u_{t} + u u_{x} + u_{xxx} = 0
 * domain: 
 
 ```math
-(x,t) \in [-20,20] \times [0, 40]$
+(x,t) \in [-20,20] \times [0, 40]
 ```
 
 * In the first problem we concern with the initial condition 
