@@ -16,9 +16,9 @@
 ## Burgers Equation: 
 
 
-$$
+\[
 u_{t} + u u_{x} = 0.1 u_{xx}
-$$
+\]
 
 with $(x,t) \in [-8,8] \times [0, 10]$. 
 
@@ -27,11 +27,11 @@ In the first problem we concern with the initial condition is $u_{0}(x) = u(x,t=
 
 ## Korteweg-de Vries (kdV) equation 
 
-$$
+\[
 \begin{equation}
 u_{t} + u u_{x} + u_{xxx} = 0 
 \end{equation}
-$$
+\]
 
 with $(x,t) \in [-20,20] \times [0, 40]$
 
