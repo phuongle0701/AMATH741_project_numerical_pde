@@ -1,5 +1,10 @@
 # AMATH741 - Numerical Partial Differential Equations: Project
 
+<script type="text/javascript" async
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js? 
+config=TeX-MML-AM_CHTML"
+</script>
+
 
 * 'matlab' folder contains the matlab files to generate the data associated with PDE problems: Burgers and Korteweg-De Vries (kDV) equations. 
 
