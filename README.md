@@ -69,8 +69,7 @@ u_{0}(x) = \cos(-\pi x/20)
 
 
 
-
-$$x_{1,2} = \frac{-b \pm \sqrt{b^2-4ac}}{2b}.$$
+$$x=\sqrt{2}$$
 
 <script type="text/javascript" async
 
