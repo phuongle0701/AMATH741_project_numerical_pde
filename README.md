@@ -10,3 +10,38 @@
 
 
 ** The matlab file needs to install external programs called 'chebfun'. It can be installed via https://www.chebfun.org/download/ and it is compatiable with  MATLAB 7.9 (R2009b) or later**
+
+
+
+## Burgers Equation: 
+
+
+$$
+u_{t} + u u_{x} = 0.1 u_{xx}
+$$
+
+with $(x,t) \in [-8,8] \times [0, 10]$. 
+
+In the first problem we concern with the initial condition is $u_{0}(x) = u(x,t=0) = - \sin(\pi x/8)$. In the second problem, we deal with the initial condition $u_{0}(x) = \exp(-(x+2)^{2})$. 
+
+
+## Korteweg-de Vries (kdV) equation 
+
+$$
+\begin{equation}
+u_{t} + u u_{x} + u_{xxx} = 0 
+\end{equation}
+$$
+
+with $(x,t) \in [-20,20] \times [0, 40]$
+
+In the first problem we concern with the initial condition $u_{0}(x) = -\sin(\pi x/20)$. In the second problem, we deal with the initial condition $u_{0}(x) = \cos(-\pi x/20)$. 
+
+
+
+
+
+
+
+
+
