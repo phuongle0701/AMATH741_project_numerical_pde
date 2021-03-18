@@ -1,9 +1,5 @@
 # AMATH741 - Numerical Partial Differential Equations: Project
 
-<script type="text/javascript" async
-src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js? 
-config=TeX-MML-AM_CHTML"
-</script>
 
 
 * 'matlab' folder contains the matlab files to generate the data associated with PDE problems: Burgers and Korteweg-De Vries (kDV) equations. 
@@ -76,3 +72,6 @@ u_{0}(x) = \cos(-\pi x/20)
 
 $$x_{1,2} = \frac{-b \pm \sqrt{b^2-4ac}}{2b}.$$
 
+<script type="text/javascript" async
+
+src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
