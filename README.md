@@ -15,28 +15,54 @@
 
 ## Burgers Equation: 
 
-
-\[
+```math
 u_{t} + u u_{x} = 0.1 u_{xx}
-\]
+```
+* domain: 
 
-with $(x,t) \in [-8,8] \times [0, 10]$. 
+```math
+(x,t) \in [-8,8] \times [0, 10]$. 
+```
 
-In the first problem we concern with the initial condition is $u_{0}(x) = u(x,t=0) = - \sin(\pi x/8)$. In the second problem, we deal with the initial condition $u_{0}(x) = \exp(-(x+2)^{2})$. 
+
+* In the first problem we concern with the initial condition: 
+ 
+```math
+u_{0}(x) = u(x,t=0) = - \sin(\pi x/8)
+``` 
+
+* In the second problem, we deal with the initial condition 
+
+```math
+u_{0}(x) = \exp(-(x+2)^{2})
+```
+
 
 
 ## Korteweg-de Vries (kdV) equation 
 
-\[
-\begin{equation}
+```math
 u_{t} + u u_{x} + u_{xxx} = 0 
-\end{equation}
-\]
+```
 
-with $(x,t) \in [-20,20] \times [0, 40]$
 
-In the first problem we concern with the initial condition $u_{0}(x) = -\sin(\pi x/20)$. In the second problem, we deal with the initial condition $u_{0}(x) = \cos(-\pi x/20)$. 
+* domain: 
 
+```math
+(x,t) \in [-20,20] \times [0, 40]$
+```
+
+* In the first problem we concern with the initial condition 
+
+```math 
+u_{0}(x) = -\sin(\pi x/20)
+```
+
+* In the second problem, we deal with the initial condition 
+
+```math
+u_{0}(x) = \cos(-\pi x/20) 
+```
 
 
 
