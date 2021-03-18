@@ -1,6 +1,6 @@
 # AMATH741 - Numerical Partial Differential Equations: Project
 
-<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
+
 
 * 'matlab' folder contains the matlab files to generate the data associated with PDE problems: Burgers and Korteweg-De Vries (kDV) equations. 
 
