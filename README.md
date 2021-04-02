@@ -43,26 +43,26 @@ u_{0}(x) = \exp(-(x+2)^{2})
 ## Korteweg-de Vries (kdV) equation 
 
 ```math
-u_{t} + u u_{x} + u_{xxx} = 0 
+u_{t} -6*u u_{x} + u_{xxx} = 0 
 ```
 
 
 * domain: 
 
 ```math
-(x,t) \in [-20,20] \times [0, 40]
+(x,t) \in [-8,8] \times [0, 2]
 ```
 
 * In the first problem we concern with the initial condition 
 
 ```math 
-u_{0}(x) = -\sin(\pi x/20)
+u_{0}(x) = - 8 (sech(2x))^2
 ```
 
 * In the second problem, we deal with the initial condition 
 
 ```math
-u_{0}(x) = \cos(-\pi x/20) 
+u_{0}(x) = -5 exp( - (x/2)^2) ) 
 ```
 
 
