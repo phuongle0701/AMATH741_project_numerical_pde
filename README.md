@@ -50,19 +50,19 @@ u_{t} + u u_{x} + u_{xxx} = 0
 * domain: 
 
 ```math
-(x,t) \in [-20,20] \times [0, 10]
+(x,t) \in [-8,8] \times [0, 20]
 ```
 
 * In the first problem we concern with the initial condition 
 
 ```math 
-u_{0}(x) = 12 (sech(x))^2
+u_{0}(x) = - sin(pi (x/8))
 ```
 
 * In the second problem, we deal with the initial condition 
 
 ```math
-u_{0}(x) = -4 exp( - (x/2)^2) ) 
+u_{0}(x) = cos (-pi (x/8))
 ```
 
 
