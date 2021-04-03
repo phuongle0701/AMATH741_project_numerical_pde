@@ -43,7 +43,7 @@ u_{0}(x) = \exp(-(x+2)^{2})
 ## Korteweg-de Vries (kdV) equation 
 
 ```math
-u_{t} -6*u u_{x} + u_{xxx} = 0 
+u_{t} + u u_{x} + u_{xxx} = 0 
 ```
 
 
@@ -56,13 +56,13 @@ u_{t} -6*u u_{x} + u_{xxx} = 0
 * In the first problem we concern with the initial condition 
 
 ```math 
-u_{0}(x) = - 8 (sech(2x))^2
+u_{0}(x) = 12 (sech(x))^2
 ```
 
 * In the second problem, we deal with the initial condition 
 
 ```math
-u_{0}(x) = -5 exp( - (x/2)^2) ) 
+u_{0}(x) = -4 exp( - (x/2)^2) ) 
 ```
 
 
