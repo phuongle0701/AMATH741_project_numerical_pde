@@ -55,46 +55,8 @@
 \maketitle
 
 %\section*{Table templates}
-\subsection{Viscid Burgers Equation}
-
-\begin{itemize}
-    \item With sine initial condition 
-\end{itemize}
-	\tabulinesep=4mm
-	{ \large  }
-	\vspace{3mm}
-	\begin{tabu} to \linewidth { | X[c] | X[c] | X[c] | X[c] | X[c] | }
-		 \hline
-	%	  \multicolumn3{c|}{} \\
-	%	\tabucline{1-1}
-		\everyrow{\hline}
-		Relative Error	& $\text{Clean Data}$ & $1 \%$ Noise & $2 \%$ Noise & $5 \%$ Noise \\
-		$\text{Identifier}$ & $3.321 \times 10^{-2}$  & $9.697 \times 10^{-2}$   & $3.265 \times 10^{-1}$  & $3.371 \times 10^{-1}$ \\
-		$\text{Solution}$ & $4.252 \times 10^{-2}$ &  $1.002 \times 10^{-1}$ & $3.164 \times 10^{-1}$    &  $4.470 \times 10^{-1}$  \\
-	\end{tabu}
 
 
-
-
-\begin{itemize}
-    \item With exponential initial condition 
-\end{itemize}
-	\tabulinesep=4mm
-	{ \large  }
-	\vspace{3mm}
-	\begin{tabu} to \linewidth { | X[c] | X[c] | X[c] | X[c] | X[c] | }
-		 \hline
-	%	  \multicolumn3{c|}{} \\
-	%	\tabucline{1-1}
-		\everyrow{\hline}
-		Relative Error	& $\text{Clean Data}$ & $1 \%$ Noise & $2 \%$ Noise & $5 \%$ Noise \\
-		$\text{Identifier}$ & $1.847 \times 10^{-3}$  & $5.294 \times 10^{-3}$   & $5.912 \times 10^{-3}$  & $1.316 \times 10^{-2}$ \\
-		$\text{Solution}$ & $4.399 \times 10^{-3}$ &  $6.857 \times 10^{-3}$ & $8.626 \times 10^{-3}$    &  $1.511 \times 10^{-2}$  \\
-	\end{tabu}
-
-
-
-\newpage
 
 \subsection{Inviscid Burgers Equation}
 
@@ -110,9 +72,29 @@
 	%	\tabucline{1-1}
 		\everyrow{\hline}
 		Relative Error	& $\text{Clean Data}$ & $1 \%$ Noise & $2 \%$ Noise & $5 \%$ Noise \\
-		$\text{Identifier}$ & $1.276 \times 10^{-3}$  & $5.796 \times 10^{-3}$   & $4.727 \times 10^{-3}$  & $7.983 \times 10^{-3}$ \\
-		$\text{Solution}$ & $1.659 \times 10^{-3}$ &  $7.246 \times 10^{-3}$ & $5.143 \times 10^{-3}$    &  $9.507 \times 10^{-3}$  \\
+		$\text{Identifier}$ & $1.744 \times 10^{-3}$  & $1.743 \times 10^{-3}$   & $4.727 \times 10^{-3}$  & $7.983 \times 10^{-3}$ \\
+		$\text{Solution}$ & $1.924 \times 10^{-3}$ &  $2.200 \times 10^{-3}$ & $5.143 \times 10^{-3}$    &  $9.507 \times 10^{-3}$  \\
 	\end{tabu}
+
+
+\begin{itemize}
+    \item With cosine initial condition 
+\end{itemize}
+	\tabulinesep=4mm
+	{ \large  }
+	\vspace{3mm}
+	\begin{tabu} to \linewidth { | X[c] | X[c] | X[c] | X[c] | X[c] | }
+		 \hline
+	%	  \multicolumn3{c|}{} \\
+	%	\tabucline{1-1}
+		\everyrow{\hline}
+		Relative Error	& $\text{Clean Data}$ & $1 \%$ Noise & $2 \%$ Noise & $5 \%$ Noise \\
+		$\text{Identifier}$ & $2.379 \times 10^{-3}$  & $4.062 \times 10^{-3}$   & $3.182 \times 10^{-3}$  & $2.112 \times 10^{-3}$ \\
+		$\text{Solution}$ & $2.680 \times 10^{-3}$ &  $4.519 \times 10^{-3}$ & $3.805 \times 10^{-3}$    &  $2.200 \times 10^{-3}$  \\
+	\end{tabu}
+
+
+\newpage 
 
 \subsection{kdV Equation}
 
@@ -129,8 +111,8 @@
 	%	\tabucline{1-1}
 		\everyrow{\hline}
 		Relative Error	& $\text{Clean Data}$ & $1 \%$ Noise & $2 \%$ Noise & $5 \%$ Noise \\
-		$\text{Identifier}$ & $3.807 \times 10^{-2}$  & $4.879 \times 10^{-2}$   & $1.159 \times 10^{-1}$  & $8.783 \times 10^{-1}$ \\
-		$\text{Solution}$ & $5.317 \times 10^{-2}$ &  $7.879 \times 10^{-2}$ & $2.032 \times 10^{-1}$    &  $9.652 \times 10^{-1}$  \\
+		$\text{Identifier}$ & $2.105 \times 10^{-2}$  & $1.827 \times 10^{-2}$   & $2.056 \times 10^{-1}$  & $1.620 \times 10^{-1}$ \\
+		$\text{Solution}$ & $2.008 \times 10^{-2}$ &  $2.129 \times 10^{-2}$ & $2.832 \times 10^{-1}$    &  $9.981 \times 10^{-1}$  \\
 	\end{tabu}
 	
 \begin{itemize}
@@ -145,8 +127,45 @@
 	%	\tabucline{1-1}
 		\everyrow{\hline}
 		Relative Error	& $\text{Clean Data}$ & $1 \%$ Noise & $2 \%$ Noise & $5 \%$ Noise \\
-		$\text{Identifier}$ & $2.099 \times 10^{-2}$  & $7.861 \times 10^{-2}$   & $1.438 \times 10^{-1}$  & $8.802 \times 10^{-1}$ \\
-		$\text{Solution}$ & $3.754 \times 10^{-2}$ &  $1.347 \times 10^{-1}$ & $2.215 \times 10^{-1}$    &  $1.559 \times 10^{-1}$  \\
+		$\text{Identifier}$ & $5.329 \times 10^{-3}$  & $5.277 \times 10^{-2}$   & $4.214 \times 10^{-1}$  & $4.086 \times 10^{-1}$ \\
+		$\text{Solution}$ & $6.632 \times 10^{-3}$ &  $5.988 \times 10^{-1}$ & $5.252 \times 10^{-1}$    &  $4.894 \times 10^{-1}$  \\
+	\end{tabu}
+	
+	
+\subsection{Viscid Burgers Equation}
+
+\begin{itemize}
+    \item With sine initial condition 
+\end{itemize}
+	\tabulinesep=4mm
+	{ \large  }
+	\vspace{3mm}
+	\begin{tabu} to \linewidth { | X[c] | X[c] | X[c] | X[c] | X[c] | }
+		 \hline
+	%	  \multicolumn3{c|}{} \\
+	%	\tabucline{1-1}
+		\everyrow{\hline}
+		Relative Error	& $\text{Clean Data}$ & $1 \%$ Noise & $2 \%$ Noise & $5 \%$ Noise \\
+		$\text{Identifier}$ & $7.425 \times 10^{-3}$  & $9.697 \times 10^{-2}$   & $3.265 \times 10^{-1}$  & $3.371 \times 10^{-1}$ \\
+		$\text{Solution}$ & $7.145 \times 10^{-3}$ &  $1.002 \times 10^{-1}$ & $3.164 \times 10^{-1}$    &  $4.470 \times 10^{-1}$  \\
+	\end{tabu}
+
+
+
+\begin{itemize}
+    \item With exponential initial condition 
+\end{itemize}
+	\tabulinesep=4mm
+	{ \large  }
+	\vspace{3mm}
+	\begin{tabu} to \linewidth { | X[c] | X[c] | X[c] | X[c] | X[c] | }
+		 \hline
+	%	  \multicolumn3{c|}{} \\
+	%	\tabucline{1-1}
+		\everyrow{\hline}
+		Relative Error	& $\text{Clean Data}$ & $1 \%$ Noise & $2 \%$ Noise & $5 \%$ Noise \\
+		$\text{Identifier}$ & $1.418 \times 10^{-3}$  & $5.294 \times 10^{-3}$   & $5.912 \times 10^{-3}$  & $1.316 \times 10^{-2}$ \\
+		$\text{Solution}$ & $2.514 \times 10^{-3}$ &  $6.857 \times 10^{-3}$ & $8.626 \times 10^{-3}$    &  $1.511 \times 10^{-2}$  \\
 	\end{tabu}
 
 \end{document}
