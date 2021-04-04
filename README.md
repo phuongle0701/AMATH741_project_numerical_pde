@@ -50,7 +50,7 @@ u_{t} + u u_{x} + u_{xxx} = 0
 * domain: 
 
 ```math
-(x,t) \in [-8,8] \times [0, 20]
+(x,t) \in [-8,8] \times [0,5]
 ```
 
 * In the first problem we concern with the initial condition 
