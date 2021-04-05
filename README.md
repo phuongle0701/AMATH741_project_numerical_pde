@@ -65,7 +65,9 @@ u_{0}(x) = - sin(pi (x/8))
 u_{0}(x) = cos (-pi (x/8))
 ```
 
+* For details of description for numerical experiment in neural network, see the https://github.com/phuongle0701/AMATH741_project_numerical_pde/blob/main/Numerical_Experiment_Description.pdf
 
+* Also, we modify the author's loss function by adding a regularization L1 to avoid overfitting the model. (Overfitting the model might happen in the case of kdV equation). 
 
 
 
