@@ -1,0 +1,95 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+
+% colors
+\usepackage[dvipsnames,svgnames,x11names]{xcolor}
+
+% graphics
+\usepackage{graphics}
+
+% TikZ picture environment
+\usepackage{tikz}
+\usetikzlibrary{arrows,scopes,fadings}
+
+% Math formatting
+\usepackage{amsmath}
+% More math
+\usepackage[fleqn,tbtags]{mathtools}
+% Physics symbols
+\usepackage{physics}
+
+%\usepackage{mdwlist}
+
+% tables
+\usepackage{tabu}
+\usepackage{diagbox}
+
+%Page Margins
+\usepackage{geometry}
+\geometry{top=1.5in,left=1in, right=1in, bottom = 1.5in}
+
+
+% Useful commands
+	% Answer in write up
+	\newcommand{\ans}[1]{\textbf{\color{Black} #1}}
+	% Write up on the board
+	%\newcommand{\board}[1]{\textbf{\color{Red} #1}}
+	% ask question
+	%\newenvironment{question}{\begin{quotation} \noindent \textbf{\color{Blue} Question}\:\:}{\end{quotation}}
+	%\newcommand{\ask}[2]{\begin{quotation} \noindent {\color{Blue} \textbf{Question:}\:\: #1} \\ {\color{Purple} #2}\end{quotation}}
+	% answer
+	%\newcommand{\ans}[1]{{\color{Purple} #1}}
+	
+% Vectors
+	\renewcommand{\vec}[1]{\boldsymbol{#1}}
+	\newcommand{\unitvec}[1]{\boldsymbol{\hat{#1}}}
+
+\begin{document}
+
+\title{Relative Error $L_{2}$ Table: Classical Method for Inviscid Burgers}
+\author{}
+\date{}
+
+\maketitle
+
+
+
+\subsection{Inviscid Burgers Equation}
+
+\begin{itemize}
+    \item The relative error $L_{2}$ with initial condition $u_{0}(x) = -\sin(\pi \frac{x}{8})$
+\end{itemize}
+
+\centering
+\begin{tabular}{|l|c|c|c|c|   }\hline
+\diagbox[width=9em]{Time\\step\\$\Delta t$}{\\Relative\\Error $L_{2}$ at\\$T$ }&
+  $T=2.00$ & $T=1.99$ & $T=1.0$ & $T=0.5$ \\ \hline
+ $0.064$ & $9.501 \times 10^{-2}$ & $9.346 \times 10^{-2}$ & $4.407 \times 10^{-2}$ & $2.590 \times 10^{-2}$ \\ \hline
+ $0.048$ & $9.647 \times 10^{-2}$ & $9.488 \times 10^{-2}$ & $4.248 \times 10^{-2}$ & $2.456 \times 10^{-2}$ \\ \hline
+ $0.032$ & $9.548 \times 10^{-2}$ & $9.393 \times 10^{-2}$ & $4.290 \times 10^{-2}$ & $2.453 \times 10^{-2}$ \\ \hline
+\end{tabular}
+
+
+
+\begin{itemize}
+    \item The relative error $L_{2}$ with initial condition $u_{0}(x) = \cos(-\pi \frac{x}{8})$
+\end{itemize}
+
+\centering
+\begin{tabular}{|l|c|c|c|c|   }\hline
+\diagbox[width=9em]{Time\\step\\$\Delta t$}{\\Relative\\Error $L_{2}$ at\\$T$ }&
+  $T=2.00$ & $T=1.99$ & $T=1.0$ & $T=0.5$ \\ \hline
+ $0.064$ & $8.988 \times 10^{-2}$ & $8.806 \times 10^{-2}$ & $2.978 \times 10^{-2}$ & $1.613 \times 10^{-2}$ \\ \hline
+ $0.048$ & $9.148 \times 10^{-2}$ & $8.964 \times 10^{-2}$ & $2.665 \times 10^{-2}$ & $1.296 \times 10^{-2}$ \\ \hline
+ $0.032$ & $9.032 \times 10^{-2}$ & $8.849 \times 10^{-2}$ & $2.759 \times 10^{-2}$ & $1.305 \times 10^{-2}$ \\ \hline
+\end{tabular}
+
+
+\begin{itemize}
+    \item Remark: (from course notes: Lax Convergence Theorem) the actual error $E^{h}$ is converging with the same order as the local truncation error $T^{h}$ i.e the order of convergence is $q=2$ in space-time. 
+\end{itemize}
+
+
+\end{document}
