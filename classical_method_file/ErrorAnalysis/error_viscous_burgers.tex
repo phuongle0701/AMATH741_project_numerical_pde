@@ -1,0 +1,91 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+
+% colors
+\usepackage[dvipsnames,svgnames,x11names]{xcolor}
+
+% graphics
+\usepackage{graphics}
+
+% TikZ picture environment
+\usepackage{tikz}
+\usetikzlibrary{arrows,scopes,fadings}
+
+% Math formatting
+\usepackage{amsmath}
+% More math
+\usepackage[fleqn,tbtags]{mathtools}
+% Physics symbols
+\usepackage{physics}
+
+%\usepackage{mdwlist}
+
+% tables
+\usepackage{tabu}
+\usepackage{diagbox}
+
+%Page Margins
+\usepackage{geometry}
+\geometry{top=1.5in,left=1in, right=1in, bottom = 1.5in}
+
+
+% Useful commands
+	% Answer in write up
+	\newcommand{\ans}[1]{\textbf{\color{Black} #1}}
+	% Write up on the board
+	%\newcommand{\board}[1]{\textbf{\color{Red} #1}}
+	% ask question
+	%\newenvironment{question}{\begin{quotation} \noindent \textbf{\color{Blue} Question}\:\:}{\end{quotation}}
+	%\newcommand{\ask}[2]{\begin{quotation} \noindent {\color{Blue} \textbf{Question:}\:\: #1} \\ {\color{Purple} #2}\end{quotation}}
+	% answer
+	%\newcommand{\ans}[1]{{\color{Purple} #1}}
+	
+% Vectors
+	\renewcommand{\vec}[1]{\boldsymbol{#1}}
+	\newcommand{\unitvec}[1]{\boldsymbol{\hat{#1}}}
+
+\begin{document}
+
+\title{Relative Error $L_{2}$ Table: Classical Method for Viscous Burgers Equation}
+\author{}
+\date{}
+
+\maketitle
+
+
+
+\subsection{Viscous Burgers Equation: Forward-Time Central Difference}
+
+\begin{itemize}
+    \item The relative error $L_{2}$ with initial condition $u_{0}(x) = -\sin(\pi \frac{x}{8})$
+\end{itemize}
+
+\centering
+\begin{tabular}{|l|c|c|c|c|   }\hline
+\diagbox[width=9em]{Time\\step\\$\Delta t$}{\\Relative\\Error $L_{2}$ at\\$T$ }&
+  $T=10.0$ & $T=9.0$ & $T=8.0$ & $T=5.0$ \\ \hline
+ $3.5 \times 10^{-3}$ & $2.85 \times 10^{-2}$ & $2.94 \times 10^{-2}$ & $3.044\times 10^{-2}$ & $3.25 \times 10^{-2}$ \\ \hline
+ $2.7 \times 10^{-3} $ & $2.85 \times 10^{-2}$ & $2.94 \times 10^{-2}$ & $3.043 \times 10^{-2}$ & $3.24 \times 10^{-2}$ \\ \hline
+ $1.95\times 10^{-3}$ & $2.84 \times 10^{-2}$ & $2.94 \times 10^{-2}$ & $3.04 \times 10^{-2}$ & $3.25 \times 10^{-2}$ \\ \hline
+\end{tabular}
+
+
+
+\begin{itemize}
+    \item The relative error $L_{2}$ with initial condition $u_{0}(x) = \exp(-(x+2)^{2}) $
+\end{itemize}
+
+\centering
+\begin{tabular}{|l|c|c|c|c|   }\hline
+\diagbox[width=9em]{Time\\step\\$\Delta t$}{\\Relative\\Error $L_{2}$ at\\$T$ }&
+  $T=5.0$ & $T=4.0$ & $T=3.5$ & $T=2.5$ \\ \hline
+ $3.5 \times 10^{-3}$ & $1.47\times 10^{-2}$ & $1.5 \times 10^{-2}$ & $1.54 \times 10^{-2}$ & $1.79 \times 10^{-2}$ \\ \hline
+ $2.7 \times 10^{-3} $ & $1.46 \times 10^{-2}$ & $1.52 \times 10^{-2}$ & $1.56 \times 10^{-2}$ & $1.81 \times 10^{-2}$ \\ \hline
+ $1.95 \times 10^{-3}$ & $1.47 \times 10^{-2}$ & $1.523 \times 10^{-2}$ & $1.58\times 10^{-2}$ & $1.824 \times 10^{-2}$ \\ \hline
+\end{tabular}
+
+
+
+\end{document}
