@@ -1,0 +1,104 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+
+% colors
+\usepackage[dvipsnames,svgnames,x11names]{xcolor}
+
+% graphics
+\usepackage{graphics}
+
+% TikZ picture environment
+\usepackage{tikz}
+\usetikzlibrary{arrows,scopes,fadings}
+
+% Math formatting
+\usepackage{amsmath}
+% More math
+\usepackage[fleqn,tbtags]{mathtools}
+% Physics symbols
+\usepackage{physics}
+
+%\usepackage{mdwlist}
+
+% tables
+\usepackage{tabu}
+\usepackage{diagbox}
+
+%Page Margins
+\usepackage{geometry}
+\geometry{top=1.5in,left=1in, right=1in, bottom = 1.5in}
+
+
+% Useful commands
+	% Answer in write up
+	\newcommand{\ans}[1]{\textbf{\color{Black} #1}}
+	% Write up on the board
+	%\newcommand{\board}[1]{\textbf{\color{Red} #1}}
+	% ask question
+	%\newenvironment{question}{\begin{quotation} \noindent \textbf{\color{Blue} Question}\:\:}{\end{quotation}}
+	%\newcommand{\ask}[2]{\begin{quotation} \noindent {\color{Blue} \textbf{Question:}\:\: #1} \\ {\color{Purple} #2}\end{quotation}}
+	% answer
+	%\newcommand{\ans}[1]{{\color{Purple} #1}}
+	
+% Vectors
+	\renewcommand{\vec}[1]{\boldsymbol{#1}}
+	\newcommand{\unitvec}[1]{\boldsymbol{\hat{#1}}}
+
+\begin{document}
+
+\title{Relative Error $L_{2}$ Table: Classical Method for kdV Equation}
+\author{}
+\date{}
+
+\maketitle
+
+
+
+\subsection{kdV Equation: Zabursky-Kruskal finite difference}
+
+\begin{itemize}
+    \item The relative error $L_{2}$ with initial condition $u_{0}(x) = -\sin(\pi \frac{x}{8})$
+\end{itemize}
+
+\centering
+\begin{tabular}{|l|c|c|c|c|   }\hline
+\diagbox[width=9em]{Time\\step\\$\Delta t$}{\\Relative\\Error $L_{2}$ at\\$T$ }&
+  $T=5.0$ & $T=4.0$ & $T=3.5$ & $T=2.5$ \\ \hline
+ $1.5 \times 10^{-3}$ & $1.422 \times 10^{-2}$ & $7.201 \times 10^{-3}$ & $5.195 \times 10^{-3}$ & $3.567 \times 10^{-3}$ \\ \hline
+ $1.3 \times 10^{-3} $ & $7.305 \times 10^{-3}$ & $5.362 \times 10^{-3}$ & $2.694 \times 10^{-3}$ & $2.694 \times 10^{-3}$ \\ \hline
+ $1.2\times 10^{-3}$ & $1.426 \times 10^{-2}$ & $7.292 \times 10^{-3}$ & $5.420 \times 10^{-3}$ & $3.436 \times 10^{-3}$ \\ \hline
+\end{tabular}
+
+
+
+\begin{itemize}
+    \item The relative error $L_{2}$ with initial condition $u_{0}(x) = \cos(-\pi \frac{x}{8})$
+\end{itemize}
+
+\centering
+\begin{tabular}{|l|c|c|c|c|   }\hline
+\diagbox[width=9em]{Time\\step\\$\Delta t$}{\\Relative\\Error $L_{2}$ at\\$T$ }&
+  $T=5.0$ & $T=4.0$ & $T=3.5$ & $T=2.5$ \\ \hline
+ $1.5 \times 10^{-3}$ & $5.602 \times 10^{-2}$ & $4.387 \times 10^{-2}$ & $3.758 \times 10^{-2}$ & $2.971 \times 10^{-2}$ \\ \hline
+ $1.3 \times 10^{-3} $ & $5.604 \times 10^{-2}$ & $4.395 \times 10^{-2}$ & $3.771 \times 10^{-2}$ & $2.907 \times 10^{-2}$ \\ \hline
+ $1.2\times 10^{-3}$ & $5.615 \times 10^{-2}$ & $4.395 \times 10^{-2}$ & $3.776 \times 10^{-2}$ & $2.963 \times 10^{-2}$ \\ \hline
+\end{tabular}
+
+
+
+
+\begin{itemize}
+    \item Remark: (from course notes: Lax Convergence Theorem) We use Zabusky-Kruskal finite difference method. The method has a stability requirement of:
+    
+    
+    \begin{equation}
+        \frac{\Delta t}{\Delta x} |-2 u_{max} + \frac{1}{(\Delta x)^{2}}          |\leq \frac{2}{3 \sqrt{3}}
+    \end{equation}
+    
+    \item The method ha a truncation error of $O( (\Delta t)^{2}  ) + O( (\Delta x)^{2}  )$
+\end{itemize}
+
+
+\end{document}
