@@ -94,7 +94,7 @@ tEnd=cputime-tStart;
     disp(size(xval));
     time=linspace(0,Tmax,n_it+1);
     disp(size(time));
-    disp(tEnd);
+    disp(['CPU time to execute: ', num2str(tEnd)]);
 figure(2); 
 pcolor(time,xval,Vals);  
 shading flat; 
