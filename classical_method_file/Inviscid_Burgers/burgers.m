@@ -1,6 +1,4 @@
-% Assignment C2: Burgers equation for the following problems 1 and 2. 
-% Name: Phuong Dong Le. 
-% Course: Numerical Partial Differential Equations. 
+% Inviscid Burgers Equation: 
 function burgers 
 clc; 
 close all; 
@@ -27,12 +25,12 @@ u=zeros(size(x));
 Tmax=2; 
 pausetime = 0.00001; % pausetime between simulation. 
 %%%%%%%%%%%%Problem 1 %%%%%%%%%%%%%%%%
-%Name = 'With $u_{0}(x) = -\sin(\pi \frac{x}{8})$';  
-%u = init_problem1(x);
+Name = 'With $u_{0}(x) = -\sin(\pi \frac{x}{8})$';  
+u = init_problem1(x);
 
 %%%%%%%%%%% Problem 2 %%%%%%%%%%%%%%%%
-Name = '$u_{0}(x) = \cos(-\pi \frac{x}{8})$'; 
-u = init_problem2(x);
+%Name = '$u_{0}(x) = \cos(-\pi \frac{x}{8})$'; 
+%u = init_problem2(x);
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -66,6 +64,8 @@ itercount=0;
 u(1)=u(2); 
 u(N+2)=u(N+1);
 
+% measuring the efficiency:
+tStart=cputime; 
 while (t<Tmax)
     uold = u; told = t; t = t + dt; itercount=itercount+1;
      % store the snapshots: 
@@ -106,7 +106,7 @@ while (t<Tmax)
    xlabel('$x(t)$', 'Interpreter','Latex');
    ylabel('$u(x,t)$', 'Interpreter', 'Latex');
    axis([-8 8 -1.5 1.5]); 
-   title([Name, ', t = ', num2str(t)], 'Interpreter','Latex');
+   title([Name, ', t = ', num2str(floor(t))], 'Interpreter','Latex');
    legend('Local Lax-Friedrichs');
    grid on; 
    grid minor; 
@@ -114,12 +114,18 @@ while (t<Tmax)
    
    Vals=[Vals, uplot'];
 end 
+tEnd=cputime-tStart;
+
+
 x=x(2:N+1);
 disp(size(Vals));
-disp(dx);
-disp(dt);
 t=0:dt:(Tmax+dt);
+disp(size(x));
 disp(size(t));
+disp(['CPU time to execute: ', num2str(tEnd)]);
+
+
+% DYNAMICS PLOT 
 
 figure(2); 
 pcolor(t,x,Vals);  
@@ -129,7 +135,7 @@ colormap(jet);
 xlabel('$t$', 'Interpreter', 'Latex'); 
 ylabel('$x$', 'Interpreter', 'Latex');
 axis([0 2 -8 8]);
-title(['Dynamics: Numerical Methods $u_{0}(x)=-\sin(\frac{\pi x}{8})$', ', dt= ', num2str(dt)], 'Interpreter', 'Latex'); 
+%title(['Dynamics: Numerical Methods $u_{0}(x)=-\sin(\frac{\pi x}{8})$', ', dt= ', num2str(dt)], 'Interpreter', 'Latex'); 
 %title(['Dynamics: Numerical Methods $u_{0}(x)=\cos(-\frac{\pi x}{8})$', ', dt= ', num2str(dt)], 'Interpreter', 'Latex'); 
 colorbar; 
 
