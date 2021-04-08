@@ -25,8 +25,8 @@ function kdV
     x=(xmin:h:xmax-h)';
     
     % initialize the value: 
-    v_old=init_problem1(x);
-    %v_old=init_problem2(x);
+    %v_old=init_problem1(x);
+    v_old=init_problem2(x);
     v_older = v_old;
     % Store the value:
     Vals=[];
@@ -43,7 +43,7 @@ function kdV
     % temporal grid
     t=(0:dt:n_it*dt)';
 % measuring the efficiency: 
-tStart = cputime; 
+tic();
     for iter=1:n_it
         
         if iter==1
@@ -77,7 +77,7 @@ tStart = cputime;
               grid on;
               grid minor;
               Name='Zabusky-Kruskal '; 
-              title([Name, ', t = ', num2str(t+dt)], 'Interpreter','Latex');
+              title([Name, ', t = ', num2str(floor(t+dt))], 'Interpreter','Latex');
               xlabel('$x$', 'Interpreter', 'Latex'); 
               ylabel('$u(x,t)$', 'Interpreter', 'Latex')
               pause(pausetime);
@@ -88,13 +88,14 @@ tStart = cputime;
         v_older=v_old;
         v_old=v_new;  
     end
-tEnd=cputime-tStart; 
-    disp(size(Vals));
-    xval=x';
-    disp(size(xval));
-    time=linspace(0,Tmax,n_it+1);
-    disp(size(time));
-    disp(['CPU time to execute: ', num2str(tEnd)]);
+disp(['Time to execute: ', num2str(toc())]);
+disp(['Time step: ', num2str(dt)]);
+disp(size(Vals));
+xval=x';
+disp(size(xval));
+time=linspace(0,Tmax,n_it+1);
+disp(size(time));
+
 figure(2); 
 pcolor(time,xval,Vals);  
 shading flat; 
