@@ -28,7 +28,7 @@ u=init_problem1(x);
 Vals=[u];
 umax=max(u(:));
 % time grid: 
-CFL=0.5; %CFL constant.  CFLs=[0.9,0.7,0.5]
+CFL=0.9; %CFL constant.  CFLs=[0.9,0.7,0.5]
 % dt1: 0.9 ; dt2: 0.7 ; dt3: 0.5
 
 % stability:
@@ -41,6 +41,8 @@ n_it=ceil(Tmax/dt);
 t=(0:dt:(n_it*dt))';
 time=0; % to put on the title of the plot: 
 
+
+tStart=cputime;
 for i=1:n_it
         
  % first node: 
@@ -72,12 +74,13 @@ for i=1:n_it
   
   
 end
+tEnd=cputime-tStart; 
 
 % print out the dimensions: Check the dims.
 disp(size(x));
 disp(size(t));
 disp(size(Vals));
-
+disp(tEnd);
 
 
 figure(2)
