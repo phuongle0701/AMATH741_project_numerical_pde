@@ -42,7 +42,7 @@ t=(0:dt:(n_it*dt))';
 time=0; % to put on the title of the plot: 
 
 
-tStart=cputime;
+tic();
 for i=1:n_it
         
  % first node: 
@@ -71,16 +71,14 @@ for i=1:n_it
   Vals=[Vals,unew];    
   % preparing the next node: 
   u=unew; 
-  
-  
 end
-tEnd=cputime-tStart; 
-
+disp(['Time to execute: ', num2str(toc())]);
+disp(['Time stepsize: ', num2str(dt)]);
 % print out the dimensions: Check the dims.
 disp(size(x));
 disp(size(t));
 disp(size(Vals));
-disp(['CPU time to execute: ', num2str(tEnd)]);
+
 
 figure(2)
 pcolor(t,x,Vals);  
