@@ -42,7 +42,8 @@ function kdV
     n_it=floor(Tmax/dt);
     % temporal grid
     t=(0:dt:n_it*dt)';
-    
+% measuring the efficiency: 
+tStart = cputime; 
     for iter=1:n_it
         
         if iter==1
@@ -87,12 +88,13 @@ function kdV
         v_older=v_old;
         v_old=v_new;  
     end
+tEnd=cputime-tStart; 
     disp(size(Vals));
     xval=x';
     disp(size(xval));
     time=linspace(0,Tmax,n_it+1);
     disp(size(time));
-    
+    disp(tEnd);
 figure(2); 
 pcolor(time,xval,Vals);  
 shading flat; 
