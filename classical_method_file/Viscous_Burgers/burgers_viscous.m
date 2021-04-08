@@ -80,8 +80,7 @@ tEnd=cputime-tStart;
 disp(size(x));
 disp(size(t));
 disp(size(Vals));
-disp(tEnd);
-
+disp(['CPU time to execute: ', num2str(tEnd)]);
 
 figure(2)
 pcolor(t,x,Vals);  
