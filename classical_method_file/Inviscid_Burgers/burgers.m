@@ -64,8 +64,8 @@ itercount=0;
 u(1)=u(2); 
 u(N+2)=u(N+1);
 
-% measuring the efficiency:
-tStart=cputime; 
+% measuring the efficiency: 
+tic(); 
 while (t<Tmax)
     uold = u; told = t; t = t + dt; itercount=itercount+1;
      % store the snapshots: 
@@ -114,15 +114,15 @@ while (t<Tmax)
    
    Vals=[Vals, uplot'];
 end 
-tEnd=cputime-tStart;
-
+disp(['Time to execute: ', num2str(toc())]);
+disp(['Time step: ', num2str(dt)]);
 
 x=x(2:N+1);
 disp(size(Vals));
 t=0:dt:(Tmax+dt);
 disp(size(x));
 disp(size(t));
-disp(['CPU time to execute: ', num2str(tEnd)]);
+
 
 
 % DYNAMICS PLOT 
@@ -135,7 +135,7 @@ colormap(jet);
 xlabel('$t$', 'Interpreter', 'Latex'); 
 ylabel('$x$', 'Interpreter', 'Latex');
 axis([0 2 -8 8]);
-%title(['Dynamics: Numerical Methods $u_{0}(x)=-\sin(\frac{\pi x}{8})$', ', dt= ', num2str(dt)], 'Interpreter', 'Latex'); 
+title(['Dynamics: Numerical Methods $u_{0}(x)=-\sin(\frac{\pi x}{8})$', ', dt= ', num2str(dt)], 'Interpreter', 'Latex'); 
 %title(['Dynamics: Numerical Methods $u_{0}(x)=\cos(-\frac{\pi x}{8})$', ', dt= ', num2str(dt)], 'Interpreter', 'Latex'); 
 colorbar; 
 
