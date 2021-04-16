@@ -21,6 +21,7 @@ end
 
 x = linspace(xmin,xmax,nn+1);
 x = x(1:end-1);
+disp(size(x));
 t = tspan;
 figure(2); 
 pcolor(t,x,real(usol)); 
