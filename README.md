@@ -99,5 +99,6 @@ u_{0}(x) = cos (-pi (x/8))
 * Technical Programming Issue: 
 1. The ```Codes``` folder contains the jupyter notebook to run author's code with our slight modification on GPU-Google Colabs. 
 2. The folder ```classical_methods``` contains the Matlab implementation of solving PDE equations numerically: Lax-Friedrichs scheme for Burgers and Leapfrog scheme for kdV equation. 
-
+3. The folder ```time_elapsed``` includes the cpu time complexity for the numerical schemes with different grid size problems. 
+4. The folder ```Matlab``` generates the dataset in ```chebfun``` package for the neural-network PDE solver. 
 
