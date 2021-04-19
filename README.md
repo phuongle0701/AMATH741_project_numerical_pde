@@ -13,7 +13,7 @@
 2. The folder ```classical_methods``` contains the Matlab implementation of solving PDE equations numerically: Lax-Friedrichs scheme for Burgers and Leapfrog scheme for kdV equation. 
 3. The folder ```time_elapsed``` includes the cpu time complexity for the numerical schemes with different grid size problems. 
 4. The folder ```Matlab``` generates the dataset in ```chebfun``` package for the neural-network PDE solver. 
-
+5. Relative L2 error are run multiple times to record the result. 
 
 ** The matlab file needs to install external programs called 'chebfun'. It can be installed via https://www.chebfun.org/download/ and it is compatiable with  MATLAB 7.9 (R2009b) or later**
 
